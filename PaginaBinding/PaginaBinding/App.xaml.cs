@@ -11,7 +11,7 @@ namespace PaginaBinding
             InitializeComponent();
 
             // MainPage = new MainPage();
-            MainPage = new Views.TabbedView();
+            MainPage = new Views.BindingClassView();
         }
 
         protected override void OnStart()

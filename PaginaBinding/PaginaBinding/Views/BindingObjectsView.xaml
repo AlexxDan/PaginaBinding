@@ -8,7 +8,11 @@
                    VerticalOptions="Start"/>
             <Entry Placeholder="Introduzca Texto"
                    FontSize="15"
+                   x:Name="cajatexto"
                    HorizontalOptions="FillAndExpand"/>
+            <Label FontSize="30" TextColor="Blue"
+                   BindingContext="{x:Reference cajatexto}" 
+                   Text="{Binding Path=Text}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
