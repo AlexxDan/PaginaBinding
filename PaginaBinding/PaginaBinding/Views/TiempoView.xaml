@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaginaBinding.Views.TiempoView"
+             xmlns:sistema="clr-namespace:System;assembly=mscorlib"
+             xmlns:viewmodels="clr-namespace:PaginaBinding.ViewModels">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Parte 1-->
+            <!--<StackLayout BindingContext="{x:Static sistema:DateTime.Now}">
+                <Label Text="{Binding StringFormat='Year: {0:yyyy}'}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+                <Label Text="{Binding StringFormat='Mes: {0:MMMM}'}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+                <Label Text="{Binding StringFormat='Hora: {0:T}'}" FontSize="30"/>
+            </StackLayout>-->
+            
+            <!--Parte 2-->
+           <StackLayout.BindingContext>
+                <viewmodels:TiempoViewModels/>
+            </StackLayout.BindingContext>
+            <!--<Label Text="{Binding Year}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+            <Label Text="{Binding Mes}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+            <Label Text="{Binding Dia}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+            <Label Text="{Binding Hora}" HorizontalOptions="FillAndExpand" FontSize="30"/>-->
+            <Label Text="{Binding Tiempo.Year}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+            <Label Text="{Binding Tiempo,StringFormat='Mes: {0:MMMM}'}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+            <Label Text="{Binding Tiempo, StringFormat='Day: {0:ddd}'}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+            <Label Text="{Binding Tiempo,StringFormat='Hora: {0:T}'}" HorizontalOptions="FillAndExpand" FontSize="30"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -21,7 +21,7 @@ namespace PaginaBinding.Views
             car.Marca = "Volkswagen";
             car.Modelo = "GOLF 8";
             car.Velociad=280;
-            car.Imagen = @"https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2019/12/volkswagen-golf-8.jpg?itok=JbvGikcl";
+            car.Imagen = @"https://soymotor.com/sites/default/files/imagenes/noticia/volkswagen-golf-8-r-line-frontal-soymotor.jpg";
             this.BindingContext = car;
           //  Subir imagen a un bucket
         }

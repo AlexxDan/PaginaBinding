@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PaginaBinding.Views.BindingClassView">
+             x:Class="PaginaBinding.Views.BindingClassView"
+             xmlns:models="clr-namespace:PaginaBinding.Models"
+             >
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout.BindingContext>
+                <models:Coches 
+                    Marca="Volkswagen" Modelo="Passar" Velociad="450"
+                    Imagen="https://static1.abc.es/media/motor/2018/10/27/tigual-renting-kEIH--620x349@abc.jpg"/>
+            </StackLayout.BindingContext>
             <Label>Prueba</Label>
             <Label Text="{Binding Marca}"
                    FontSize="Large"
@@ -11,10 +18,12 @@
             <Label Text="{Binding Modelo}"
                    FontSize="Large"
                TextColor="Gray" />
-            <Label Text="{Binding Velocidad}"
+            <Label Text="{Binding Velociad}"
                    FontSize="Large"
                TextColor="Red" />
-            
+            <Image Source="{Binding Imagen}"
+                    WidthRequest="200"
+                    HeightRequest="200"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
