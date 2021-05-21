@@ -11,7 +11,7 @@ namespace PaginaBinding
             InitializeComponent();
 
             // MainPage = new MainPage();
-            MainPage = new Views.TiempoView();
+            MainPage = new Views.PersonaView();
         }
 
         protected override void OnStart()

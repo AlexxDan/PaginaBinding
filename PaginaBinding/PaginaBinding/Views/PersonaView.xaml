@@ -12,13 +12,15 @@
                    VerticalOptions="StartAndExpand"
                    HorizontalOptions="FillAndExpand"/>
             <Entry HorizontalOptions="FillAndExpand"
-                   Text="{Binding Persona.Nombre}" Placeholder="Nombre...."/>
+                   Text="{Binding Persona.Nombre, Mode=TwoWay}" Placeholder="Nombre...."/>
             <Entry HorizontalOptions="FillAndExpand"
-                   Text="{Binding Persona.Edad}" Placeholder="Edad????"/>
+                   Text="{Binding Persona.Edad, Mode=TwoWay}" Placeholder="Edad????"/>
 
             <Button HorizontalOptions="FillAndExpand"
+                    Command="{Binding MostrarDescripcion}"
                     Text="Mostrar descripción"/>
             <Button HorizontalOptions="FillAndExpand"
+                    Command="{Binding NewPersona}"
                     Text="Nueva Persona"/>
 
             <Label FontSize="30" TextColor="Blue" Text="{Binding Descripcion}"/>
