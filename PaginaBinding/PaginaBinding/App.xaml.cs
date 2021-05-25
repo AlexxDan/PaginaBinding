@@ -11,7 +11,8 @@ namespace PaginaBinding
             InitializeComponent();
 
             // MainPage = new MainPage();
-            MainPage = new Views.ListaNumColoresView();
+            // MainPage = new Views.ListNumeroColoresView();
+            MainPage = new MenuPrincipal();
         }
 
         protected override void OnStart()

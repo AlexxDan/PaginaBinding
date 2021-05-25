@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PaginaBinding.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,16 +7,18 @@ namespace PaginaBinding.Models
 {
     public class ListaNumeros
     {
-        public List<int> Numeros
+        public List<NumeroViewModels> Numeros
         {
             get
             {
                 Random random= new Random();
-                List<int> lista = new List<int>();
+                List<NumeroViewModels> lista = new List<NumeroViewModels>();
                 for (int i=1;i<=17;i++)
                 {
                     int valor = random.Next(-25, 25);
-                    lista.Add(valor);
+                    NumeroViewModels model = new NumeroViewModels();
+                    model.Valor = valor;
+                    lista.Add(model);
                 }
                 return lista;
             }
